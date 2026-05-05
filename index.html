@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-ka="Tropic Georgia — AI სააგენტო ბიზნესის მომავლისთვის" data-en="Tropic Georgia — AI-Driven Agency for the Future of Business">Tropic Georgia — AI სააგენტო ბიზნესის მომავლისთვის</title>
+  <meta name="description" data-ka="AI-ით მართული სააგენტო თბილისში — რეკლამა, ვებსაიტები, AI გადაწყვეტები" data-en="AI-driven agency in Tbilisi — advertising, web development, AI solutions" content="AI-ით მართული სააგენტო თბილისში — რეკლამა, ვებსაიტები, AI გადაწყვეტები" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" defer></script>
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <div class="bg-grid"></div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo logo-lg">
+        <svg class="logo-mark" viewBox="0 0 90 110" fill="currentColor" aria-hidden="true">
+          <rect x="0" y="0" width="90" height="22"/>
+          <rect x="30" y="22" width="30" height="56"/>
+          <polygon points="30,78 60,78 45,110"/>
+        </svg>
+        <span class="logo-text">ROPIC GEORGIA</span>
+      </a>
+      <nav class="nav">
+        <a href="#home" data-ka="მთავარი" data-en="Home">მთავარი</a>
+        <a href="#services" data-ka="სერვისები" data-en="Services">სერვისები</a>
+        <a href="#team" data-ka="გუნდი" data-en="Team">გუნდი</a>
+        <a href="#process" data-ka="პროცესი" data-en="Process">პროცესი</a>
+        <a href="#faq" data-ka="FAQ" data-en="FAQ">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-toggle" aria-label="Switch language" id="langToggle">
+          <span data-lang="ka" class="active">
+            <svg class="flag" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="120" height="80" fill="#ffffff"/>
+              <rect x="48" y="0" width="24" height="80" fill="#FF0000"/>
+              <rect x="0" y="32" width="120" height="16" fill="#FF0000"/>
+              <g fill="#FF0000">
+                <rect x="21" y="6" width="6" height="20"/>
+                <rect x="14" y="13" width="20" height="6"/>
+                <rect x="93" y="6" width="6" height="20"/>
+                <rect x="86" y="13" width="20" height="6"/>
+                <rect x="21" y="54" width="6" height="20"/>
+                <rect x="14" y="61" width="20" height="6"/>
+                <rect x="93" y="54" width="6" height="20"/>
+                <rect x="86" y="61" width="20" height="6"/>
+              </g>
+            </svg>
+            KA
+          </span>
+          <span data-lang="en">
+            <svg class="flag" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <clipPath id="uk-s"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+              <clipPath id="uk-t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+              <g clip-path="url(#uk-s)">
+                <rect width="60" height="30" fill="#012169"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#ffffff" stroke-width="6"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#uk-t)" stroke="#C8102E" stroke-width="4"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#ffffff" stroke-width="10"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+              </g>
+            </svg>
+            UK
+          </span>
+        </button>
+        <a href="#contact" class="btn btn-primary" data-ka="დაიწყე" data-en="Get Started">დაიწყე</a>
+        <button class="mobile-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <canvas id="shader-bg" aria-hidden="true"></canvas>
+    <div class="container">
+      <h1 class="hero-title">
+        <span data-ka="AI-ზე დაფუძნებული სააგენტო" data-en="AI-Driven Agency">AI-ზე დაფუძნებული სააგენტო</span><br/>
+        <span class="gradient-text" data-ka="ბიზნესის მომავლისთვის" data-en="for the Future of Business">ბიზნესის მომავლისთვის</span>
+      </h1>
+      <p class="hero-sub" data-ka="ჩვენ ვქმნით რეკლამას, ვებსაიტებს და AI გადაწყვეტილებებს ბრენდების სწრაფი განვითარებისთვის." data-en="We build advertising, websites, and AI solutions for the fast growth of brands.">
+        ჩვენ ვქმნით რეკლამას, ვებსაიტებს და AI გადაწყვეტილებებს ბრენდების სწრაფი განვითარებისთვის.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-accent btn-lg" data-ka="დააჯავშნე კონსულტაცია →" data-en="Book a Consultation →">დააჯავშნე კონსულტაცია →</a>
+        <a href="#services" class="btn btn-ghost btn-lg" data-ka="სერვისების ნახვა" data-en="Explore Services">სერვისების ნახვა</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">300%</div>
+          <div class="stat-label" data-ka="შემოსავლის ზრდა" data-en="Revenue Lift">შემოსავლის ზრდა</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-ka-suffix="სთ" data-en-suffix="h">40სთ</div>
+          <div class="stat-label" data-ka="დაზოგილი დროა კვირაში" data-en="Saved per Week">დაზოგილი დროა კვირაში</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label" data-ka="AI ოპერაციები" data-en="AI Operations">AI ოპერაციები</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS -->
+  <section class="logos">
+    <div class="container">
+      <p class="logos-title" data-ka="ჩვენი კლიენტები" data-en="Our Clients">ჩვენი კლიენტები</p>
+      <div class="logos-row">
+        <span>NOVA</span>
+        <span>HELIX</span>
+        <span>QUANTUM</span>
+        <span>ATLAS</span>
+        <span>ORBIT</span>
+        <span>VERTEX</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head center">
+        <h2 data-ka="ჩვენი სერვისები" data-en="Our Services">ჩვენი სერვისები</h2>
+        <p class="section-sub" data-ka="ყველაფერი რაც გჭირდებათ ბაზარზე დომინირებისთვის." data-en="Everything you need to dominate the market.">ყველაფერი რაც გჭირდებათ ბაზარზე დომინირებისთვის.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="6"/>
+              <circle cx="12" cy="12" r="2"/>
+            </svg>
+          </div>
+          <h3 data-ka="რეკლამა" data-en="Advertising">რეკლამა</h3>
+          <p data-ka="AI-ზე დაფუძნებული კამპანიები, რომლებიც კონვერტირდება. შესრულების მარკეტინგი აგებული მასშტაბისთვის." data-en="AI-powered campaigns that convert. Performance marketing built to scale.">AI-ზე დაფუძნებული კამპანიები, რომლებიც კონვერტირდება. შესრულების მარკეტინგი აგებული მასშტაბისთვის.</p>
+          <a href="#" class="card-link" data-ka="გაიგე მეტი →" data-en="Learn more →">გაიგე მეტი →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <h3 data-ka="ვებ დეველოპმენტი" data-en="Web Development">ვებ დეველოპმენტი</h3>
+          <p data-ka="ელვისებურად სწრაფი, კონვერსიაზე ოპტიმიზებული საიტები. აგებული შესრულებისთვის, დიზაინირებული გაყიდვისთვის." data-en="Lightning-fast, conversion-optimized sites. Built for performance, designed to sell.">ელვისებურად სწრაფი, კონვერსიაზე ოპტიმიზებული საიტები. აგებული შესრულებისთვის, დიზაინირებული გაყიდვისთვის.</p>
+          <a href="#" class="card-link" data-ka="გაიგე მეტი →" data-en="Learn more →">გაიგე მეტი →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2z"/>
+              <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2z"/>
+            </svg>
+          </div>
+          <h3 data-ka="AI გადაწყვეტილებები" data-en="AI Solutions">AI გადაწყვეტილებები</h3>
+          <p data-ka="მორგებული AI აგენტები და ავტომატიზაცია. იმუშავე ჭკვიანად, გაიზარდე სწრაფად." data-en="Custom AI agents and automation. Work smarter, scale faster.">მორგებული AI აგენტები და ავტომატიზაცია. იმუშავე ჭკვიანად, გაიზარდე სწრაფად.</p>
+          <a href="#" class="card-link" data-ka="გაიგე მეტი →" data-en="Learn more →">გაიგე მეტი →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI TEAM -->
+  <section class="team" id="team">
+    <div class="container">
+      <div class="section-head center">
+        <h2 data-ka="გაიცანი შენი AI გუნდი" data-en="Meet Your AI Team">გაიცანი შენი AI გუნდი</h2>
+        <p class="section-sub" data-ka="ოთხი სპეციალიზებული აგენტი მუშაობს 24/7 შენი წარმატებისთვის." data-en="Four specialized agents working 24/7 for your success.">ოთხი სპეციალიზებული აგენტი მუშაობს 24/7 შენი წარმატებისთვის.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="agent">
+          <div class="agent-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 18h6"/>
+              <path d="M10 22h4"/>
+              <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8a6 6 0 0 0-12 0c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+            </svg>
+          </div>
+          <h4 data-ka="კრეატიული სტრატეგი" data-en="Creative Strategist">კრეატიული სტრატეგი</h4>
+          <p data-ka="გენერირებს კამპანიის კონცეფციებს და კონტენტ სტრატეგიებს ბრენდის ხმასთან შესაბამისად." data-en="Generates campaign concepts and content strategies aligned with your brand voice.">გენერირებს კამპანიის კონცეფციებს და კონტენტ სტრატეგიებს ბრენდის ხმასთან შესაბამისად.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+              <polyline points="16 7 22 7 22 13"/>
+            </svg>
+          </div>
+          <h4 data-ka="შესრულების ანალიტიკოსი" data-en="Performance Analyst">შესრულების ანალიტიკოსი</h4>
+          <p data-ka="აკვირდება მეტრიკებს, აიდენტიფიცირებს შესაძლებლობებს, ოპტიმიზებს ROI-ს რეალურ დროში." data-en="Tracks metrics, identifies opportunities, optimizes ROI in real time.">აკვირდება მეტრიკებს, აიდენტიფიცირებს შესაძლებლობებს, ოპტიმიზებს ROI-ს რეალურ დროში.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+            </svg>
+          </div>
+          <h4 data-ka="ბრენდის მცველი" data-en="Brand Guardian">ბრენდის მცველი</h4>
+          <p data-ka="უზრუნველყოფს თანამიმდევრულობას ყველა წერტილზე და იცავს ბრენდის მთლიანობას." data-en="Ensures consistency at every touchpoint and protects brand integrity.">უზრუნველყოფს თანამიმდევრულობას ყველა წერტილზე და იცავს ბრენდის მთლიანობას.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <h4 data-ka="ავტომატიზაციის სპეციალისტი" data-en="Automation Specialist">ავტომატიზაციის სპეციალისტი</h4>
+          <p data-ka="ამარტივებს სამუშაო პროცესებს, ცვლის განმეორებით ამოცანებს, გაძლევთ ფოკუსირების საშუალებას." data-en="Streamlines workflows, replaces repetitive tasks, gives you focus.">ამარტივებს სამუშაო პროცესებს, ცვლის განმეორებით ამოცანებს, გაძლევთ ფოკუსირების საშუალებას.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-head center">
+        <h2 data-ka="როგორ ვმუშაობთ" data-en="How We Work">როგორ ვმუშაობთ</h2>
+        <p class="section-sub" data-ka="დადასტურებული პროცესი, რომელიც იძლევა შედეგებს." data-en="A proven process that delivers results.">დადასტურებული პროცესი, რომელიც იძლევა შედეგებს.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h4 data-ka="აღმოჩენა" data-en="Discover">აღმოჩენა</h4>
+          <p data-ka="ვადგენთ თქვენს მიზნებს და ვაიდენტიფიცირებთ შესაძლებლობებს." data-en="We define your goals and identify opportunities.">ვადგენთ თქვენს მიზნებს და ვაიდენტიფიცირებთ შესაძლებლობებს.</p>
+        </div>
+        <span class="step-divider" aria-hidden="true">→</span>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h4 data-ka="დიზაინი" data-en="Design">დიზაინი</h4>
+          <p data-ka="ვქმნით გადაწყვეტილებებს, მორგებულს თქვენს ბრენდზე." data-en="We craft solutions tailored to your brand.">ვქმნით გადაწყვეტილებებს, მორგებულს თქვენს ბრენდზე.</p>
+        </div>
+        <span class="step-divider" aria-hidden="true">→</span>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h4 data-ka="გაშვება" data-en="Deploy">გაშვება</h4>
+          <p data-ka="სწრაფად ვუშვებთ ზუსტი შესრულებით." data-en="We deploy fast with precision execution.">სწრაფად ვუშვებთ ზუსტი შესრულებით.</p>
+        </div>
+        <span class="step-divider" aria-hidden="true">→</span>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h4 data-ka="ოპტიმიზაცია" data-en="Optimize">ოპტიმიზაცია</h4>
+          <p data-ka="მუდმივად ვაუმჯობესებთ მაქსიმალური გავლენისთვის." data-en="We continuously improve for maximum impact.">მუდმივად ვაუმჯობესებთ მაქსიმალური გავლენისთვის.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="tech" id="tech">
+    <div class="container">
+      <div class="section-head center">
+        <h2 data-ka="ჩვენი ტექნოლოგიური სტეკი" data-en="Our Tech Stack">ჩვენი ტექნოლოგიური სტეკი</h2>
+        <p class="section-sub" data-ka="უახლესი ინსტრუმენტებითა და პლატფორმებით." data-en="Built with cutting-edge tools and platforms.">უახლესი ინსტრუმენტებითა და პლატფორმებით.</p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <h4 data-ka="დეველოპმენტი" data-en="Development">დეველოპმენტი</h4>
+          <p>React, TypeScript, Node.js</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
+              <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
+              <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
+              <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
+              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>
+            </svg>
+          </div>
+          <h4 data-ka="დიზაინი" data-en="Design">დიზაინი</h4>
+          <p>Figma, Tailwind CSS, Framer</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2a4.5 4.5 0 0 0-4.5 4.5v.05A4.5 4.5 0 0 0 3 11a4.5 4.5 0 0 0 1.5 3.36V15a4.5 4.5 0 0 0 4.5 4.5 4.5 4.5 0 0 0 3-1.13 4.5 4.5 0 0 0 3 1.13A4.5 4.5 0 0 0 19.5 15v-.64A4.5 4.5 0 0 0 21 11a4.5 4.5 0 0 0-4.5-4.45V6.5A4.5 4.5 0 0 0 12 2z"/>
+              <path d="M12 6v16"/>
+            </svg>
+          </div>
+          <h4 data-ka="AI და ავტომატიზაცია" data-en="AI & Automation">AI და ავტომატიზაცია</h4>
+          <p>OpenAI, Claude, Custom Models</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17.5 19a4.5 4.5 0 1 0 0-9h-1.8A7 7 0 1 0 4 14.9"/>
+              <path d="M9 19h8.5"/>
+            </svg>
+          </div>
+          <h4 data-ka="ინფრასტრუქტურა" data-en="Infrastructure">ინფრასტრუქტურა</h4>
+          <p>Supabase, Vercel, AWS</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+              <polyline points="16 7 22 7 22 13"/>
+            </svg>
+          </div>
+          <h4 data-ka="მარკეტინგი" data-en="Marketing">მარკეტინგი</h4>
+          <p>Meta Ads, Google Ads, Analytics</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M3 5v14a9 3 0 0 0 18 0V5"/>
+              <path d="M3 12a9 3 0 0 0 18 0"/>
+            </svg>
+          </div>
+          <h4 data-ka="მონაცემები და CRM" data-en="Data & CRM">მონაცემები და CRM</h4>
+          <p>PostgreSQL, Stripe, HubSpot</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-head center">
+        <h2 data-ka="შეფასებები" data-en="Reviews">შეფასებები</h2>
+      </div>
+
+      <div class="quotes">
+        <blockquote class="quote">
+          <p data-ka="„Tropic Georgia-მ ჩვენი ონლაინ გაყიდვები 3-ჯერ გაზარდა მხოლოდ 4 თვეში. რეალური ცვლილებაა."" data-en="“Tropic Georgia tripled our online sales in just 4 months. Real change.”">„Tropic Georgia-მ ჩვენი ონლაინ გაყიდვები 3-ჯერ გაზარდა მხოლოდ 4 თვეში. რეალური ცვლილებაა.“</p>
+          <footer>
+            <strong data-ka="ნინო ბერიძე" data-en="Nino Beridze">ნინო ბერიძე</strong>
+            <span>CEO, Nova Retail</span>
+          </footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p data-ka="„მათი AI-სისტემა ისე ჩაერთო ჩვენს გუნდში, თითქოს ყოველთვის აქ იყო. მაგარი შედეგებია."" data-en="“Their AI system fit our team like it had always been here. Great results.”">„მათი AI-სისტემა ისე ჩაერთო ჩვენს გუნდში, თითქოს ყოველთვის აქ იყო. მაგარი შედეგებია.“</p>
+          <footer>
+            <strong data-ka="გიორგი კვარაცხელია" data-en="Giorgi Kvaratskhelia">გიორგი კვარაცხელია</strong>
+            <span>Founder, Helix Studio</span>
+          </footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p data-ka="„ერთადერთი სააგენტო, რომელიც მართლაც იყენებს AI-ს და არ უბრალოდ ამბობს ამას."" data-en="“The only agency that actually uses AI, instead of just talking about it.”">„ერთადერთი სააგენტო, რომელიც მართლაც იყენებს AI-ს და არ უბრალოდ ამბობს ამას.“</p>
+          <footer>
+            <strong data-ka="თამარ გელაშვილი" data-en="Tamar Gelashvili">თამარ გელაშვილი</strong>
+            <span data-ka="მარკეტინგის დირექტორი, Atlas" data-en="Marketing Director, Atlas">მარკეტინგის დირექტორი, Atlas</span>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow" data-ka="FAQ" data-en="FAQ">FAQ</span>
+        <h2 data-ka="ხშირად დასმული კითხვები" data-en="Frequently Asked Questions">ხშირად დასმული კითხვები</h2>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary data-ka="რა დრო სჭირდება პროექტის გაშვებას?" data-en="How long does it take to launch a project?">რა დრო სჭირდება პროექტის გაშვებას?</summary>
+          <p data-ka="საშუალოდ 2–6 კვირა, პროექტის სირთულის მიხედვით. პირველი შედეგები ხშირად 2 კვირაშივე ჩანს." data-en="Usually 2–6 weeks depending on scope. First results often show within 2 weeks.">საშუალოდ 2–6 კვირა, პროექტის სირთულის მიხედვით. პირველი შედეგები ხშირად 2 კვირაშივე ჩანს.</p>
+        </details>
+        <details>
+          <summary data-ka="რა ღირს თქვენი სერვისები?" data-en="How much do your services cost?">რა ღირს თქვენი სერვისები?</summary>
+          <p data-ka="ფასი დამოკიდებულია მასშტაბზე. გაგვიგზავნე შეტყობინება — შეგიდგენთ ინდივიდუალურ შეთავაზებას." data-en="Price depends on scope. Send us a message — we’ll prepare a custom proposal.">ფასი დამოკიდებულია მასშტაბზე. გაგვიგზავნე შეტყობინება — შეგიდგენთ ინდივიდუალურ შეთავაზებას.</p>
+        </details>
+        <details>
+          <summary data-ka="რა AI ხელსაწყოებს იყენებთ?" data-en="What AI tools do you use?">რა AI ხელსაწყოებს იყენებთ?</summary>
+          <p data-ka="GPT-4, Midjourney, ElevenLabs და კასტომ მოდელები — დავალების მიხედვით." data-en="GPT-4, Midjourney, ElevenLabs, and custom models — depending on the task.">GPT-4, Midjourney, ElevenLabs და კასტომ მოდელები — დავალების მიხედვით.</p>
+        </details>
+        <details>
+          <summary data-ka="მუშაობთ პატარა ბიზნესებთან?" data-en="Do you work with small businesses?">მუშაობთ პატარა ბიზნესებთან?</summary>
+          <p data-ka="დიახ — სტარტაპებიდან კორპორაციებამდე. გვაქვს მოქნილი პაკეტები ყველა მასშტაბისთვის." data-en="Yes — from startups to enterprises. We have flexible packages for every scale.">დიახ — სტარტაპებიდან კორპორაციებამდე. გვაქვს მოქნილი პაკეტები ყველა მასშტაბისთვის.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA: BUILD WITH AI -->
+  <section class="cta" id="cta-build">
+    <div class="container">
+      <div class="cta-simple">
+        <h2 data-ka="ავაშენოთ AI-თ" data-en="Let's build with AI">ავაშენოთ AI-თ</h2>
+        <p data-ka="მზად ხარ შენი ბიზნესის ტრანსფორმაციისთვის? მოდი ვისაუბროთ სტრატეგიაზე." data-en="Ready to transform your business? Let's talk strategy.">მზად ხარ შენი ბიზნესის ტრანსფორმაციისთვის? მოდი ვისაუბროთ სტრატეგიაზე.</p>
+        <a href="#contact" class="btn btn-accent btn-lg" data-ka="დაიწყე პროექტი →" data-en="Start Your Project →">დაიწყე პროექტი →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-head center">
+        <h2>
+          <span data-ka="მოდი" data-en="Let's">მოდი</span>
+          <span class="gradient-text" data-ka="დავუკავშირდეთ" data-en="connect">დავუკავშირდეთ</span>
+        </h2>
+        <p class="section-sub" data-ka="მზად ხარ შენი ბიზნესის ტრანსფორმაციისთვის? აირჩიე როგორ გსურს დაწყება." data-en="Ready to transform your business? Pick how you want to start.">მზად ხარ შენი ბიზნესის ტრანსფორმაციისთვის? აირჩიე როგორ გსურს დაწყება.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2"/>
+              <path d="M16 2v4M8 2v4M3 10h18"/>
+            </svg>
+          </div>
+          <h4 data-ka="დაჯავშნე ზარი" data-en="Book a call">დაჯავშნე ზარი</h4>
+          <p data-ka="დაგეგმე სტრატეგიული სესია ჩვენს გუნდთან." data-en="Schedule a strategy session with our team.">დაგეგმე სტრატეგიული სესია ჩვენს გუნდთან.</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M22 7l-10 6L2 7"/>
+            </svg>
+          </div>
+          <h4 data-ka="მოგვწერე" data-en="Email us">მოგვწერე</h4>
+          <p data-ka="დაგვიკავშირდი პირდაპირ ელ-ფოსტით." data-en="Reach us directly via email.">დაგვიკავშირდი პირდაპირ ელ-ფოსტით.</p>
+          <a href="mailto:tropicgeorgia@gmail.com" class="contact-link">tropicgeorgia@gmail.com →</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon contact-icon-row">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </div>
+          <h4 data-ka="გამოგვყევი" data-en="Follow us">გამოგვყევი</h4>
+          <p data-ka="იყავი განახლებული ჩვენი უახლესი საქმიანობის შესახებ." data-en="Stay updated with our latest work.">იყავი განახლებული ჩვენი უახლესი საქმიანობის შესახებ.</p>
+          <p class="contact-social-list">Facebook • Instagram • LinkedIn</p>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <h3 data-ka="გამოგვიგზავნე შეტყობინება" data-en="Send us a message">გამოგვიგზავნე შეტყობინება</h3>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-name" data-ka="სახელი *" data-en="Name *">სახელი *</label>
+              <input id="cf-name" type="text" name="name" required
+                data-ka-placeholder="შენი სახელი"
+                data-en-placeholder="Your name"
+                placeholder="შენი სახელი"/>
+            </div>
+            <div class="form-field">
+              <label for="cf-email" data-ka="ელ-ფოსტა *" data-en="Email *">ელ-ფოსტა *</label>
+              <input id="cf-email" type="email" name="email" required
+                placeholder="sheni@email.com"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-company" data-ka="კომპანია (არასავალდებულო)" data-en="Company (optional)">კომპანია (არასავალდებულო)</label>
+              <input id="cf-company" type="text" name="company"
+                data-ka-placeholder="შენი კომპანია"
+                data-en-placeholder="Your company"
+                placeholder="შენი კომპანია"/>
+            </div>
+            <div class="form-field">
+              <label for="cf-budget" data-ka="ბიუჯეტის დიაპაზონი" data-en="Budget range">ბიუჯეტის დიაპაზონი</label>
+              <input id="cf-budget" type="text" name="budget"
+                data-ka-placeholder="ზუსტი თანხა (მაგ. $1000)"
+                data-en-placeholder="Exact amount (e.g. $1000)"
+                placeholder="ზუსტი თანხა (მაგ. $1000)"/>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="cf-message" data-ka="შეტყობინება *" data-en="Message *">შეტყობინება *</label>
+            <textarea id="cf-message" name="message" rows="5" required
+              data-ka-placeholder="მოგვიყევი შენი პროექტის შესახებ..."
+              data-en-placeholder="Tell us about your project..."
+              placeholder="მოგვიყევი შენი პროექტის შესახებ..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-accent btn-block" data-ka="გაგზავნა →" data-en="Send →">გაგზავნა →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="logo logo-lg">
+            <svg class="logo-mark" viewBox="0 0 90 110" fill="currentColor" aria-hidden="true">
+              <rect x="0" y="0" width="90" height="22"/>
+              <rect x="30" y="22" width="30" height="56"/>
+              <polygon points="30,78 60,78 45,110"/>
+            </svg>
+            <span class="logo-text">ROPIC GEORGIA</span>
+          </a>
+          <p class="footer-about" data-ka="AI-ზე დაფუძნებული სააგენტო, რომელიც აკავშირებს ადამიანურ კრეატივს უახლეს ტექნოლოგიასთან შემდეგი თაობის გადაწყვეტილებების მისაწოდებლად მომავალზე ორიენტირებული ბიზნესებისთვის." data-en="AI-driven agency connecting human creativity with cutting-edge technology to deliver next-generation solutions for future-focused businesses.">AI-ზე დაფუძნებული სააგენტო, რომელიც აკავშირებს ადამიანურ კრეატივს უახლეს ტექნოლოგიასთან შემდეგი თაობის გადაწყვეტილებების მისაწოდებლად მომავალზე ორიენტირებული ბიზნესებისთვის.</p>
+        </div>
+        <div>
+          <h5 data-ka="კომპანია" data-en="Company">კომპანია</h5>
+          <a href="#services" data-ka="სერვისები" data-en="Services">სერვისები</a>
+          <a href="#team" data-ka="გუნდი" data-en="Team">გუნდი</a>
+          <a href="#process" data-ka="პროცესი" data-en="Process">პროცესი</a>
+          <a href="#faq" data-ka="FAQ" data-en="FAQ">FAQ</a>
+        </div>
+        <div>
+          <h5 data-ka="კონტაქტი" data-en="Contact">კონტაქტი</h5>
+          <a href="mailto:tropicgeorgia@gmail.com">tropicgeorgia@gmail.com</a>
+          <span data-ka="თბილისი, საქართველო" data-en="Tbilisi, Georgia">თბილისი, საქართველო</span>
+        </div>
+        <div>
+          <h5 data-ka="სოც. ქსელები" data-en="Social">სოც. ქსელები</h5>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span data-ka="© 2026 Tropic Georgia. ყველა უფლება დაცულია." data-en="© 2026 Tropic Georgia. All rights reserved.">© 2026 Tropic Georgia. ყველა უფლება დაცულია.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="shader-bg.js" defer></script>
+  <script src="script.js"></script>
+</body>
+</html>
